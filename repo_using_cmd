@@ -1,0 +1,31 @@
+###########################################################
+# create a github repo using cmd and git cli
+
+# Step 1: Install GitHub CLI (If Not Installed)
+
+# Open CMD/PowerShell and run:
+> gh --version
+
+#  Login to GitHub (only needed once)
+#  Follow the instructions to authenticate via GitHub.
+> gh auth login
+
+# Open Your Folder in VS Code
+# Initialize Git in the Folder
+# This initializes a Git repository.
+> git init
+
+
+# Create a GitHub Repository from VS Code Terminal
+# Run this command inside the folder:
+# Replace your-repo-name with your actual repo name.
+# Use --public instead of --private if you want a public repo.
+> gh repo create your-repo-name --private --source=. --remote=origin
+
+# Add and Commit Your Files
+> git add .   ("."  will select all files in the folder to stage)
+> git commit -m "Initial commit"
+
+# Push to GitHub
+> git branch -M main   (this command will check and match branch to local and set branch to main)
+> git push -u origin main
